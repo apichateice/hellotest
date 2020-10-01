@@ -16,19 +16,19 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CreateMemberIntegrationTest {
 
-    @Autowired
-    private TestRestTemplate restTemplate;
-
-    @Test
-    public void createClient() throws InterruptedException {
-        Member member = new Member();
-        member.setName("Cherprang");
-
-        ResponseEntity<Member> responseEntity =
-                restTemplate.postForEntity("/members", member, Member.class);
-        Member memberResponse = responseEntity.getBody();
-
-        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(memberResponse.getName()).isEqualTo("Cherprang");
-    }
+//    @Autowired
+//    private TestRestTemplate restTemplate;
+//
+//    @Test
+//    public void createClient() throws InterruptedException {
+//        Member member = new Member();
+//        member.setName("Cherprang");
+//
+//        ResponseEntity<Member> responseEntity =
+//                restTemplate.postForEntity("/members", member, Member.class);
+//        Member memberResponse = responseEntity.getBody();
+//
+//        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+//        assertThat(memberResponse.getName()).isEqualTo("Cherprang");
+//    }
 }
